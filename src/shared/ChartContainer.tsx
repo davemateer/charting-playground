@@ -2,15 +2,11 @@ import React from "react";
 
 type Props = {
   caption: string;
-  columns?: number;
+  className?: string;
 };
 
-const ChartContainer: React.FC<Props> = ({
-  caption,
-  children,
-  columns = 1,
-}) => (
-  <figure className={columns > 1 ? `col-${columns}` : ""}>
+const ChartContainer: React.FC<Props> = ({ caption, children, className }) => (
+  <figure className={className}>
     {children}
     <figcaption>{caption}</figcaption>
   </figure>

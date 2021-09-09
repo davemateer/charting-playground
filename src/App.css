@@ -35,3 +35,7 @@ figcaption {
 .col-2 {
   grid-column-end: span 2;
 }
+
+.row-break {
+  grid-column-start: 1;
+}
