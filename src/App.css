@@ -3,7 +3,7 @@ html {
 }
 
 body {
-  background-color: #aaa;
+  background-color: #ccc;
 }
 
 main {
@@ -11,12 +11,6 @@ main {
   gap: 1rem;
   grid-template-columns: repeat(3, 1fr);
   padding: 2rem;
-}
-
-@media screen and (max-width: 1200px) {
-  main {
-    grid-template-columns: repeat(2, 1fr);
-  }
 }
 
 figure {
@@ -36,6 +30,16 @@ figcaption {
   grid-column-end: span 2;
 }
 
-.row-break {
+h1 {
   grid-column-start: 1;
+  grid-column-end: span 3;
+}
+
+@media screen and (max-width: 1200px) {
+  main {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  h1 {
+    grid-column-end: span 2;
+  }
 }

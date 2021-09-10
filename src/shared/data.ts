@@ -1,6 +1,11 @@
 import { statusColors } from "./constants";
 
-export const sampleCasesOverTime = [
+type caseOverTimeType = {
+  date: string;
+  pended: number;
+};
+
+export const sampleCasesOverTime: caseOverTimeType[] = [
   {
     date: "2021-09-05",
     pended: 16,

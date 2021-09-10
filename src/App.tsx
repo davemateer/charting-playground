@@ -1,48 +1,72 @@
 import "./App.css";
+
 import React from "react";
-import LineChartImpl from "./recharts/LineChartImpl";
+
+import ReactVisAreaChartImpl from "./reactvis/ReactVisAreaChartImpl";
+import ReactVisLineChartImpl from "./reactvis/ReactVisLineChartImpl";
 import AreaChartImpl from "./recharts/AreaChartImpl";
-import PieChartImpl from "./recharts/PieChartImpl";
 import BarChartImpl from "./recharts/BarChartImpl";
+import LineChartImpl from "./recharts/LineChartImpl";
+import PieChartImpl from "./recharts/PieChartImpl";
 import ChartContainer from "./shared/ChartContainer";
 import { chartAspect } from "./shared/constants";
-import VictoryLineChartImpl from "./victory/VictoryLineChartImpl";
 import VictoryAreaChartImpl from "./victory/VictoryAreaChartImpl";
-import VictoryPieChartImpl from "./victory/VictoryPieChartImpl";
 import VictoryBarChartImpl from "./victory/VictoryBarChartImpl";
+import VictoryLineChartImpl from "./victory/VictoryLineChartImpl";
+import VictoryPieChartImpl from "./victory/VictoryPieChartImpl";
+import ReactVisArcChartImpl from "./reactvis/ReactVisArcChartImpl";
+import ReactVisBarChartImpl from "./reactvis/ReactVisBarChartImpl";
 
 function App() {
   return (
     <main>
-      <ChartContainer caption="Pending cases by date (recharts: line)">
+      <h1>Recharts</h1>
+      <ChartContainer caption="Pending cases by date (line)">
         <LineChartImpl />
       </ChartContainer>
-      <ChartContainer caption="Pending cases by date (recharts: area)">
+      <ChartContainer caption="Pending cases by date (area)">
         <AreaChartImpl />
       </ChartContainer>
-      <ChartContainer caption="Case status, last 30 days (recharts: pie)">
+      <ChartContainer caption="Case status, last 30 days (pie)">
         <PieChartImpl />
       </ChartContainer>
       <ChartContainer
-        caption="Avg hours to resolve, last 90 days (recharts: bar)"
+        caption="Avg hours to resolve, last 90 days (bar)"
         className="col-2"
       >
         <BarChartImpl aspect={chartAspect * 2} />
       </ChartContainer>
-      <ChartContainer
-        caption="Pending cases by date (victory: line)"
-        className="row-break"
-      >
+      <h1>Victory</h1>
+      <ChartContainer caption="Pending cases by date (line)">
         <VictoryLineChartImpl />
       </ChartContainer>
-      <ChartContainer caption="Pending cases by date (victory: area)">
+      <ChartContainer caption="Pending cases by date (area)">
         <VictoryAreaChartImpl />
       </ChartContainer>
-      <ChartContainer caption="Case status, last 30 days (victory: pie)">
+      <ChartContainer caption="Case status, last 30 days (pie)">
         <VictoryPieChartImpl />
       </ChartContainer>
-      <ChartContainer caption="Avg hours to resolve, last 90 days (victory: bar)" className="col-2">
+      <ChartContainer
+        caption="Avg hours to resolve, last 90 days (bar)"
+        className="col-2"
+      >
         <VictoryBarChartImpl />
+      </ChartContainer>
+      <h1>React-vis</h1>
+      <ChartContainer caption="Pending cases by date (line)">
+        <ReactVisLineChartImpl />
+      </ChartContainer>
+      <ChartContainer caption="Pending cases by date (area)">
+        <ReactVisAreaChartImpl />
+      </ChartContainer>
+      <ChartContainer caption="Case status, last 30 days (radial)">
+        <ReactVisArcChartImpl />
+      </ChartContainer>
+      <ChartContainer
+        caption="Avg hours to resolve, last 90 days (bar)"
+        className="col-2"
+      >
+        <ReactVisBarChartImpl />
       </ChartContainer>
     </main>
   );
