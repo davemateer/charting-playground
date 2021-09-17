@@ -20,6 +20,31 @@ import ReactVisBarChartImpl from "./reactvis/ReactVisBarChartImpl";
 function App() {
   return (
     <main>
+      <div className="summary">
+        <h1>Summary</h1>
+        <ul>
+          <li>
+            <strong>React-vis</strong> appears to be abandoned, had least usable
+            API; not recommended.
+          </li>
+          <li>
+            <strong>Recharts</strong> and <strong>Victory</strong> both seem to
+            be useable, active libraries that would likely cover any charting
+            needs we would have for this project.
+          </li>
+          <li>
+            Slight preference among the team towards <strong>Recharts</strong>{" "}
+            with the important caveat that none of us spent a great deal of time
+            in any of these libraries.
+          </li>
+          <li>
+            Recommendation would be to wait until we actually have a use case,
+            and then see which library (<strong>Recharts</strong> or{" "}
+            <strong>Victory</strong>) seems to implement that use case the
+            cleanest.
+          </li>
+        </ul>
+      </div>
       <h1>Recharts</h1>
       <ChartContainer caption="Pending cases by date (line)">
         <LineChartImpl />
